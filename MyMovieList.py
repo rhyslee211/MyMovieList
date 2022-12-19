@@ -155,14 +155,22 @@ def searchMovie():
 
     movietitle = input("What movie would you like to search for? ")
 
+    keyfile = open("keys.txt")
+    keylines = keyfile.readlines()
+
+    rapidkey = keylines[0].strip()
+    ratingskey = keylines[1].strip()
+
 
     try:
         url = "https://ott-details.p.rapidapi.com/search"
 
         querystring = {"title":movietitle,"page":"1"}
 
+
+
         headers = {
-            "X-RapidAPI-Key": "f02518403fmsh19a5da995def9b5p10ce65jsn686002427174",
+            "X-RapidAPI-Key": rapidkey,
             "X-RapidAPI-Host": "ott-details.p.rapidapi.com"
         }
 
@@ -176,8 +184,7 @@ def searchMovie():
                 movieid = i["imdbid"]
                 break
 
-
-        imdburl = "https://imdb-api.com/API/Ratings/k_akrjj09k/"
+        imdburl = "https://imdb-api.com/API/Ratings/" + ratingskey + "/"
 
         imdbresponse = requests.get(imdburl + movieid)
 
