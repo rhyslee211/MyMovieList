@@ -51,7 +51,7 @@ def testPassword(tempUsername):
 def rateMovie():
     movieName = input("Movie Name: ")
     movieScore = input("Movie Score(Out of 10): ")
-    while(movieScore < 1 or movieScore > 10):
+    while(int(movieScore) < 1 or int(movieScore) > 10):
         movieScore = input("Please Score the movie between 1 and 10")
     movieReview = input("Write a small review(Optional): ")
 

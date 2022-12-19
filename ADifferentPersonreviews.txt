@@ -1,0 +1,9 @@
+Name:Dunkirk
+Score:9/10
+Review:A great telling of the story of Dunkirk!
+Name:The Avengers
+Score:8/10
+Review:Great action, a very fun movie!
+Name:Star Wars
+Score:7/10
+Review:A fun adventure about a farmboy from Tattooine
